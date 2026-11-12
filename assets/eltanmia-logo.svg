@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" role="img" aria-labelledby="title desc">
+  <title id="title">Eltanmia Company logo</title>
+  <desc id="desc">Stylized blue building outlines and Arabic/English company name</desc>
+  <g fill="none" stroke="#0b1f3a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M130 380V160h170v220"/>
+    <path d="M300 380V245h170v135"/>
+    <path d="M470 380V205h220v175"/>
+    <path d="M690 380V90h160v290"/>
+    <path d="M850 380V145h210v235"/>
+    <path d="M1060 380V235h170v145"/>
+    <path d="M130 380h1100"/>
+    <path d="M201 160v-40m81 40v-40m136 85v-70m86 70v-70m149 75v-100m86 100v-100m149 120v-155m78 155v-155" opacity="0.95"/>
+    <path d="M520 205h80"/>
+    <path d="M720 90h80"/>
+    <path d="M885 145h80"/>
+    <path d="M1120 235h80"/>
+  </g>
+
+  <g font-family="'Cairo','Arial',sans-serif" text-anchor="middle" fill="#0b1f3a">
+    <text x="700" y="560" font-size="122" font-weight="700" direction="rtl">التنمية الهندسية</text>
+    <text x="700" y="655" font-size="76" font-weight="700" direction="rtl">للمقاولات</text>
+    <text x="700" y="730" font-size="62" font-weight="700" letter-spacing="1">Engineering Development Contracting</text>
+  </g>
+</svg>
