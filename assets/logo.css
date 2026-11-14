@@ -1,24 +1,17 @@
-/* Use the existing company logo asset in place of the decorative mark and header text. */
+/* Replace the text-and-bolt placeholder with the company logo asset. */
 .logo{
-  width:clamp(96px,16vw,132px)!important;
-  height:60px!important;
+  width:clamp(112px,17vw,160px)!important;
+  height:62px!important;
   flex:0 0 auto!important;
   display:block!important;
   overflow:hidden!important;
   font-size:0!important;
   line-height:0!important;
+  background:url('eltanmia-logo.svg') center/contain no-repeat!important;
 }
 .logo i{
-  display:block!important;
-  width:100%!important;
-  height:100%!important;
-  background-color:transparent!important;
-  background-image:url('eltanmia-logo.svg')!important;
-  background-position:center!important;
-  background-repeat:no-repeat!important;
-  background-size:contain!important;
-  clip-path:none!important;
+  display:none!important;
 }
 @media(max-width:560px){
-  .logo{width:88px!important;height:52px!important}
+  .logo{width:100px!important;height:54px!important}
 }
