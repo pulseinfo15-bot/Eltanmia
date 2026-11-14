@@ -60,3 +60,30 @@
   background-repeat:no-repeat;
   box-shadow:0 5px 16px rgba(11,31,58,.12);
 }
+
+/* Cleopatra Hotel, Marsa Alam: uploaded photos displayed as a project tile in Recent Projects. */
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid .proj:last-child::after,
+#projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::after{
+  content:"فندق كليوباترا، مرسى علم";
+  display:flex;
+  align-items:flex-end;
+  min-height:270px;
+  margin-top:14px;
+  padding:18px;
+  border:1px solid #e1e7ef;
+  border-radius:14px;
+  color:#fff;
+  font:700 20px/1.4 'Cairo',Arial,sans-serif;
+  text-shadow:0 2px 6px rgba(0,0,0,.85);
+  background-image:
+    linear-gradient(to top,rgba(5,18,45,.86),rgba(5,18,45,0) 60%),
+    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85.jpeg'),
+    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-0.jpeg'),
+    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-01.jpeg'),
+    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85--2.jpeg'),
+    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-4.jpeg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  box-shadow:0 5px 16px rgba(11,31,58,.12);
+}
