@@ -9,16 +9,41 @@
     *{box-sizing:border-box}
     html,body{margin:0;width:100%;min-height:100%;background:#fff}
     iframe{display:block;width:100%;height:100vh;border:0}
+    .intro-splash{
+      position:fixed;inset:0;z-index:9999;
+      display:grid;place-items:center;
+      width:100%;height:100%;padding:5vw;
+      background:#fff;
+      opacity:1;visibility:visible;
+      transition:opacity .55s ease,visibility .55s ease;
+    }
+    .intro-splash img{
+      display:block;width:min(94vw,1500px);height:min(88vh,850px);
+      object-fit:contain;object-position:center;
+    }
+    .intro-splash.is-leaving{opacity:0;visibility:hidden;pointer-events:none}
+    @media(prefers-reduced-motion:reduce){.intro-splash{transition:none}}
   </style>
 </head>
 <body>
+  <div class="intro-splash" id="introSplash" role="status" aria-label="Eltanmia Company">
+    <img src="assets/eltanmia-logo.svg" alt="Eltanmia Company">
+  </div>
   <iframe id="site" title="Eltanmia Company website"></iframe>
   <script>
     const frame=document.getElementById('site');
+    const splash=document.getElementById('introSplash');
+    let splashDismissed=false;
+    function dismissSplash(){
+      if(splashDismissed)return;
+      splashDismissed=true;
+      splash.classList.add('is-leaving');
+      setTimeout(()=>splash.remove(),600);
+    }
     frame.src='eltamia.html'+location.search+location.hash;
     frame.addEventListener('load',()=>{
       const doc=frame.contentDocument;
-      if(!doc)return;
+      if(!doc){setTimeout(dismissSplash,1800);return;}
       const stylesheet=doc.createElement('link');
       stylesheet.rel='stylesheet';
       stylesheet.href='assets/modern.css';
@@ -33,7 +58,9 @@
       setTimeout(resize,100);
       setTimeout(resize,800);
       window.addEventListener('resize',resize);
+      setTimeout(dismissSplash,2000);
     });
+    setTimeout(dismissSplash,7000);
   </script>
 </body>
 </html>
