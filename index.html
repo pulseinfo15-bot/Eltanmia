@@ -52,6 +52,33 @@
       logoStylesheet.rel='stylesheet';
       logoStylesheet.href='assets/logo.css?v=20261114-header-logo-large';
       doc.head.appendChild(logoStylesheet);
+      const partnerStyles=doc.createElement('style');
+      partnerStyles.textContent=`
+        #clients .logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;align-items:stretch;margin-top:30px}
+        #clients .logos .logo-item{background:#fff;border:1px solid rgba(17,31,58,.12);border-radius:12px;min-height:90px;display:grid;place-items:center;padding:12px;box-shadow:0 3px 10px rgba(11,31,58,.04)}
+        #clients .logos .logo-item img{max-width:100%;max-height:52px;width:auto;object-fit:contain;display:block}
+        @media(max-width:560px){#clients .logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#clients .logos .logo-item{min-height:74px;padding:10px}}
+      `;
+      doc.head.appendChild(partnerStyles);
+      const partnerLogos=[
+        {src:'https://upload.wikimedia.org/wikipedia/commons/5/5e/Schneider_Electric_Logo.svg',alt:'Schneider Electric'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/a/a7/Elsewedy_Electric.svg',alt:'Elsewedy Electric'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/5/51/ABB_logo.svg',alt:'ABB'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/9/9c/Siemens-logo.svg',alt:'Siemens'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/b/bd/Legrand_logo.svg',alt:'Legrand'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/c/c1/Eaton_Corporation_logo.svg',alt:'Eaton'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/6/65/Philips_logo_new.svg',alt:'Philips'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/7/7e/Prysmian_Group_Logo.svg',alt:'Prysmian'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/c/c2/Nexans_logo.svg',alt:'Nexans'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/a/aa/Honeywell_logo.svg',alt:'Honeywell'},
+        {src:'https://www.ecgsa.com/wp-content/themes/ecgsa/assets/img/logo-en.svg',alt:'ECG Engineering Consultancy'},
+        {src:'https://www.shakerconsultants.com/images/logo.svg',alt:'Shaker Engineering Consultancy'},
+        {src:'https://www.deltaegypt.com/sites/all/themes/delta/images/logo.png',alt:'Delta Egypt Lighting'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/2/2a/Cleopatra_Group_logo.svg',alt:'Cleopatra Group'},
+        {src:'https://upload.wikimedia.org/wikipedia/commons/7/7d/ACE_Moharram_Bakhoum_logo.svg',alt:'Moharram Bakhoum'}
+      ];
+      const logos=doc.querySelector('#clients .logos');
+      if(logos){logos.innerHTML=partnerLogos.map(item=>`<div class="logo-item"><img src="${item.src}" alt="${item.alt}" title="${item.alt}"></div>`).join('');}
       const logo=doc.querySelector('header .logo');
       if(logo){
         const logoUrl=new URL('assets/logo--2026-11-12%20at%201.40.18%20PM.jpeg',frame.contentWindow.location.href).href;
