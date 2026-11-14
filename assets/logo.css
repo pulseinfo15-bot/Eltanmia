@@ -9,17 +9,11 @@
   line-height:0!important;
   background:url('logo--2026-11-12%20at%201.40.18%20PM.jpeg') center/contain no-repeat!important;
 }
-.logo i{
-  display:none!important;
-}
-@media(max-width:860px){
-  .logo{width:190px!important;height:58px!important}
-}
-@media(max-width:560px){
-  .logo{width:155px!important;height:52px!important}
-}
+.logo i{display:none!important}
+@media(max-width:860px){.logo{width:190px!important;height:58px!important}}
+@media(max-width:560px){.logo{width:155px!important;height:52px!important}}
 
-/* Cleopatra Plaza Tower, Alexandria: four-photo project card in Recent Projects. */
+/* Cleopatra Plaza Tower, Alexandria: display the four uploaded project photos as a project card. */
 #projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::before,
 #projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid::before{
   content:"برج كليوباترا بلازا، الإسكندرية";
@@ -36,10 +30,10 @@
     linear-gradient(to top,rgba(5,18,45,.84),rgba(5,18,45,0) 58%),
     url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-.jpeg'),
     url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-1.jpeg'),
-    url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-%D8-2.jpeg'),
+    url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9--2.jpeg'),
     url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-4.jpeg');
-  background-size:cover,50% 50%,50% 50%,50% 50%,50% 50%;
-  background-position:center,top left,top right,bottom left,bottom right;
+  background-size:cover,cover,cover,cover,cover;
+  background-position:center,center,center,center,center;
   background-repeat:no-repeat;
-  box-shadow:0 5px 16px rgba(11,31,58,.06);
+  box-shadow:0 5px 16px rgba(11,31,58,.12);
 }
