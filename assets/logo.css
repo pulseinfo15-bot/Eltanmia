@@ -1,17 +1,20 @@
-/* Replace the text-and-bolt placeholder with the company logo asset. */
+/* Use the uploaded company logo in the site header, sized to fit the navigation bar. */
 .logo{
-  width:clamp(180px,28vw,260px)!important;
-  height:90px!important;
+  width:clamp(150px,20vw,220px)!important;
+  height:64px!important;
   flex:0 0 auto!important;
   display:block!important;
   overflow:hidden!important;
   font-size:0!important;
   line-height:0!important;
-  background:url('eltanmia-logo.svg') center/contain no-repeat!important;
+  background:url('logo--2026-11-12%20at%201.40.18%20PM.jpeg') center/contain no-repeat!important;
 }
 .logo i{
   display:none!important;
 }
+@media(max-width:860px){
+  .logo{width:190px!important;height:58px!important}
+}
 @media(max-width:560px){
-  .logo{width:170px!important;height:82px!important}
+  .logo{width:155px!important;height:52px!important}
 }
