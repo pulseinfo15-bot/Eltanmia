@@ -1,11 +1,11 @@
-/* Use the industrial MEP plant-room photo in the hero only. Replace the URL with a locally hosted high-resolution WebP when available. */
+/* Use the uploaded industrial plant-room photo for the hero background only. */
 .hero{
   background-image:
     linear-gradient(90deg,rgba(5,18,45,.94) 0%,rgba(8,30,70,.79) 48%,rgba(10,45,100,.53) 100%),
     linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
     linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),
     linear-gradient(to bottom,transparent 75%,rgba(5,18,45,.32) 100%),
-    url('https://images.unsplash.com/photo-1581092918056-0c4c3a3fdd0f?auto=format&fit=crop&w=2400&q=82')!important;
+    url('assets/pic-tec-01.jpeg')!important;
   background-size:auto,52px 52px,52px 52px,100% 100%,cover!important;
   background-position:center,center,center,center,center right!important;
   background-repeat:no-repeat,repeat,repeat,no-repeat,no-repeat!important;
@@ -16,7 +16,7 @@ html[dir="rtl"] .hero{
     linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
     linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),
     linear-gradient(to bottom,transparent 75%,rgba(5,18,45,.32) 100%),
-    url('https://images.unsplash.com/photo-1581092918056-0c4c3a3fdd0f?auto=format&fit=crop&w=2400&q=82')!important;
+    url('assets/pic-tec-01.jpeg')!important;
   background-position:center,center,center,center,center left!important;
 }
 @media(max-width:700px){
@@ -26,7 +26,7 @@ html[dir="rtl"] .hero{
       linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
       linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),
       linear-gradient(to bottom,transparent 72%,rgba(5,18,45,.38) 100%),
-      url('https://images.unsplash.com/photo-1581092918056-0c4c3a3fdd0f?auto=format&fit=crop&w=1600&q=78')!important;
+      url('assets/pic-tec-01.jpeg')!important;
     background-size:auto,48px 48px,48px 48px,100% 100%,cover!important;
     background-position:center,center,center,center,center center!important;
   }
@@ -36,7 +36,7 @@ html[dir="rtl"] .hero{
       linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
       linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),
       linear-gradient(to bottom,transparent 72%,rgba(5,18,45,.38) 100%),
-      url('https://images.unsplash.com/photo-1581092918056-0c4c3a3fdd0f?auto=format&fit=crop&w=1600&q=78')!important;
+      url('assets/pic-tec-01.jpeg')!important;
     background-position:center,center,center,center,center center!important;
   }
 }
