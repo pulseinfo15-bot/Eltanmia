@@ -3,12 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=eltamia.html">
-  <link rel="canonical" href="eltamia.html">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Eltanmia Company</title>
-  <script>window.location.replace("eltamia.html" + window.location.search + window.location.hash);</script>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;width:100%;min-height:100%;background:#fff}
+    iframe{display:block;width:100%;height:100vh;border:0}
+  </style>
 </head>
 <body>
-  <p><a href="eltamia.html">Continue to Eltanmia Company</a></p>
+  <iframe id="site" title="Eltanmia Company website"></iframe>
+  <script>
+    const frame=document.getElementById('site');
+    frame.src='eltamia.html'+location.search+location.hash;
+    frame.addEventListener('load',()=>{
+      const doc=frame.contentDocument;
+      if(!doc)return;
+      const stylesheet=doc.createElement('link');
+      stylesheet.rel='stylesheet';
+      stylesheet.href='assets/modern.css';
+      doc.head.appendChild(stylesheet);
+      const resize=()=>{frame.style.height=Math.max(doc.documentElement.scrollHeight,doc.body.scrollHeight)+'px'};
+      new ResizeObserver(resize).observe(doc.documentElement);
+      new ResizeObserver(resize).observe(doc.body);
+      setTimeout(resize,100);
+      setTimeout(resize,800);
+      window.addEventListener('resize',resize);
+    });
+  </script>
 </body>
 </html>
