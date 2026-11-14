@@ -1,7 +1,7 @@
 /* Replace the text-and-bolt placeholder with the company logo asset. */
 .logo{
-  width:clamp(112px,17vw,160px)!important;
-  height:62px!important;
+  width:clamp(150px,22vw,210px)!important;
+  height:76px!important;
   flex:0 0 auto!important;
   display:block!important;
   overflow:hidden!important;
@@ -13,5 +13,5 @@
   display:none!important;
 }
 @media(max-width:560px){
-  .logo{width:100px!important;height:54px!important}
+  .logo{width:128px!important;height:66px!important}
 }
