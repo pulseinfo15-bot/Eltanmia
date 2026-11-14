@@ -80,10 +80,10 @@
     url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85.jpeg'),
     url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-0.jpeg'),
     url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-01.jpeg'),
-    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85--2.jpeg'),
-    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-4.jpeg');
-  background-size:cover;
-  background-position:center;
+    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85--2.jpeg'),
+    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-4.jpeg');
+  background-size:cover,50% 100%,50% 100%,50% 100%,50% 100%;
+  background-position:center,left center,right center,left bottom,right bottom;
   background-repeat:no-repeat;
   box-shadow:0 5px 16px rgba(11,31,58,.12);
 }
@@ -110,4 +110,36 @@
   background-position:center,left center,right center;
   background-repeat:no-repeat;
   box-shadow:0 5px 16px rgba(11,31,58,.12);
+}
+
+/* Premium treatment for project cards: cleaner spacing and stronger visual focus. */
+#projects #grid{
+  display:grid;
+  gap:22px;
+}
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::before,
+#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid::before,
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::after,
+#projects:has(#filters [data-f="comm"][aria-pressed="true"]) #grid::after,
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid .proj:last-child::before,
+#projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::before,
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid .proj:last-child::after,
+#projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::after{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(17,31,58,.12);
+  border-radius:20px;
+  box-shadow:0 18px 40px rgba(11,31,58,.08);
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::before:hover,
+#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid::before:hover,
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::after:hover,
+#projects:has(#filters [data-f="comm"][aria-pressed="true"]) #grid::after:hover,
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid .proj:last-child::before:hover,
+#projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::before:hover,
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid .proj:last-child::after:hover,
+#projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::after:hover{
+  transform:translateY(-2px);
+  box-shadow:0 22px 46px rgba(11,31,58,.12);
 }
