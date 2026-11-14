@@ -88,6 +88,11 @@
         if(bolt)bolt.style.setProperty('display','none','important');
       }
 
+      const emailItem=doc.querySelector('#contact .info li[dir="ltr"]:nth-child(3)');
+      if(emailItem){
+        emailItem.innerHTML='<a href="mailto:info@eltanmia-eng.com">info@eltanmia-eng.com</a>';
+      }
+
       const profileLink=doc.querySelector('[data-i="profile"]');
       if(profileLink){
         profileLink.href='assets/Eltanmia%20company%20profile.pdf';
