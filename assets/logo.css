@@ -17,106 +17,41 @@
 #projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::before,
 #projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid::before{
   content:"برج كليوباترا بلازا، الإسكندرية";
-  display:flex;
-  align-items:flex-end;
-  min-height:270px;
-  padding:18px;
-  border:1px solid #e1e7ef;
-  border-radius:14px;
-  color:#fff;
-  font:700 20px/1.4 'Cairo',Arial,sans-serif;
-  text-shadow:0 2px 6px rgba(0,0,0,.8);
-  background-image:
-    linear-gradient(to top,rgba(5,18,45,.84),rgba(5,18,45,0) 58%),
-    url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-.jpeg'),
-    url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-1.jpeg'),
-    url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9--2.jpeg'),
-    url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-4.jpeg');
-  background-size:cover,cover,cover,cover,cover;
-  background-position:center,center,center,center,center;
-  background-repeat:no-repeat;
-  box-shadow:0 5px 16px rgba(11,31,58,.12);
+  display:flex;align-items:flex-end;min-height:270px;padding:18px;border:1px solid #e1e7ef;border-radius:14px;color:#fff;
+  font:700 20px/1.4 'Cairo',Arial,sans-serif;text-shadow:0 2px 6px rgba(0,0,0,.8);
+  background-image:linear-gradient(to top,rgba(5,18,45,.84),rgba(5,18,45,0) 58%),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-1.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9--2.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-4.jpeg');
+  background-size:cover,cover,cover,cover,cover;background-position:center;background-repeat:no-repeat;box-shadow:0 5px 16px rgba(11,31,58,.12)
 }
 
 /* Cleopatra Tower, Nasr City, Cairo: two uploaded photos shown in a separate project card. */
 #projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::after,
 #projects:has(#filters [data-f="comm"][aria-pressed="true"]) #grid::after{
-  content:"برج كليوباترا، مدينة نصر، القاهرة";
-  display:flex;
-  align-items:flex-end;
-  min-height:270px;
-  padding:18px;
-  border:1px solid #e1e7ef;
-  border-radius:14px;
-  color:#fff;
-  font:700 20px/1.4 'Cairo',Arial,sans-serif;
-  text-shadow:0 2px 6px rgba(0,0,0,.85);
-  background-image:
-    linear-gradient(to top,rgba(5,18,45,.86),rgba(5,18,45,0) 60%),
-    url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7-%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1.jpeg'),
-    url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7-%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1-1.png');
-  background-size:cover,50% 100%,50% 100%;
-  background-position:center,left center,right center;
-  background-repeat:no-repeat;
-  box-shadow:0 5px 16px rgba(11,31,58,.12);
+  content:"برج كليوباترا، مدينة نصر، القاهرة";display:flex;align-items:flex-end;min-height:270px;padding:18px;border:1px solid #e1e7ef;border-radius:14px;color:#fff;
+  font:700 20px/1.4 'Cairo',Arial,sans-serif;text-shadow:0 2px 6px rgba(0,0,0,.85);
+  background-image:linear-gradient(to top,rgba(5,18,45,.86),rgba(5,18,45,0) 60%),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7-%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7-%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1-1.png');
+  background-size:cover,50% 100%,50% 100%;background-position:center,left center,right center;background-repeat:no-repeat;box-shadow:0 5px 16px rgba(11,31,58,.12)
 }
 
 /* Cleopatra Hotel, Marsa Alam: uploaded photos displayed as a project tile in Recent Projects. */
 #projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid .proj:last-child::after,
 #projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::after{
-  content:"فندق كليوباترا، مرسى علم";
-  display:flex;
-  align-items:flex-end;
-  min-height:270px;
-  margin-top:14px;
-  padding:18px;
-  border:1px solid #e1e7ef;
-  border-radius:14px;
-  color:#fff;
-  font:700 20px/1.4 'Cairo',Arial,sans-serif;
-  text-shadow:0 2px 6px rgba(0,0,0,.85);
-  background-image:
-    linear-gradient(to top,rgba(5,18,45,.86),rgba(5,18,45,0) 60%),
-    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85.jpeg'),
-    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-0.jpeg'),
-    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-01.jpeg'),
-    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85--2.jpeg'),
-    url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-4.jpeg');
-  background-size:cover,50% 100%,50% 100%,50% 100%,50% 100%;
-  background-position:center,left center,right center,left bottom,right bottom;
-  background-repeat:no-repeat;
-  box-shadow:0 5px 16px rgba(11,31,58,.12);
+  content:"فندق كليوباترا، مرسى علم";display:flex;align-items:flex-end;min-height:270px;margin-top:14px;padding:18px;border:1px solid #e1e7ef;border-radius:14px;color:#fff;
+  font:700 20px/1.4 'Cairo',Arial,sans-serif;text-shadow:0 2px 6px rgba(0,0,0,.85);
+  background-image:linear-gradient(to top,rgba(5,18,45,.86),rgba(5,18,45,0) 60%),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-0.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-01.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85--2.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-4.jpeg');
+  background-size:cover,50% 100%,50% 100%,50% 100%,50% 100%;background-position:center,left center,right center,left bottom,right bottom;background-repeat:no-repeat;box-shadow:0 5px 16px rgba(11,31,58,.12)
 }
 
 /* Cleopatra Sidi Heneish Resort, Matrouh: show both uploaded photographs in a project tile. */
 #projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid .proj:last-child::before,
 #projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::before{
-  content:"منتجع كليوباترا سيدي حنيش، مطروح";
-  display:flex;
-  align-items:flex-end;
-  min-height:270px;
-  margin-top:14px;
-  padding:18px;
-  border:1px solid #e1e7ef;
-  border-radius:14px;
-  color:#fff;
-  font:700 20px/1.4 'Cairo',Arial,sans-serif;
-  text-shadow:0 2px 6px rgba(0,0,0,.85);
-  background-image:
-    linear-gradient(to top,rgba(5,18,45,.86),rgba(5,18,45,0) 60%),
-    url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-2.jpeg'),
-    url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-5.jpeg');
-  background-size:cover,50% 100%,50% 100%;
-  background-position:center,left center,right center;
-  background-repeat:no-repeat;
-  box-shadow:0 5px 16px rgba(11,31,58,.12);
+  content:"منتجع كليوباترا سيدي حنيش، مطروح";display:flex;align-items:flex-end;min-height:270px;margin-top:14px;padding:18px;border:1px solid #e1e7ef;border-radius:14px;color:#fff;
+  font:700 20px/1.4 'Cairo',Arial,sans-serif;text-shadow:0 2px 6px rgba(0,0,0,.85);
+  background-image:linear-gradient(to top,rgba(5,18,45,.86),rgba(5,18,45,0) 60%),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-2.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-5.jpeg');
+  background-size:cover,50% 100%,50% 100%;background-position:center,left center,right center;background-repeat:no-repeat;box-shadow:0 5px 16px rgba(11,31,58,.12)
 }
 
-/* Premium treatment for project cards: cleaner spacing and stronger visual focus. */
-#projects #grid{
-  display:grid;
-  gap:22px;
-}
+/* Premium styling for project image tiles. */
+#projects #grid{display:grid;gap:22px}
 #projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::before,
 #projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid::before,
 #projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::after,
@@ -125,21 +60,19 @@
 #projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::before,
 #projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid .proj:last-child::after,
 #projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::after{
-  position:relative;
-  overflow:hidden;
-  border:1px solid rgba(17,31,58,.12);
-  border-radius:20px;
-  box-shadow:0 18px 40px rgba(11,31,58,.08);
-  transition:transform .22s ease, box-shadow .22s ease;
+  position:relative;overflow:hidden;border:1px solid rgba(17,31,58,.12);border-radius:20px;box-shadow:0 18px 40px rgba(11,31,58,.08);transition:transform .22s ease,box-shadow .22s ease
 }
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::before:hover,
-#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid::before:hover,
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::after:hover,
-#projects:has(#filters [data-f="comm"][aria-pressed="true"]) #grid::after:hover,
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid .proj:last-child::before:hover,
-#projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::before:hover,
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid .proj:last-child::after:hover,
-#projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid .proj:last-child::after:hover{
-  transform:translateY(-2px);
-  box-shadow:0 22px 46px rgba(11,31,58,.12);
+
+/* Fantazia Beach Village, Hurghada: use all four uploaded photos in its existing Recent Projects card. */
+#projects #grid .proj:nth-child(2) .img{
+  background-image:
+    linear-gradient(rgba(5,18,45,.08),rgba(5,18,45,.08)),
+    url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9.jpeg'),
+    url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9%20(2).jpeg'),
+    url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9-2.jpeg'),
+    url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9-3.jpeg');
+  background-size:cover,50% 50%,50% 50%,50% 50%,50% 50%;
+  background-position:center,top left,top right,bottom left,bottom right;
+  background-repeat:no-repeat;
 }
+#projects #grid .proj:nth-child(2) .img svg{display:none}
