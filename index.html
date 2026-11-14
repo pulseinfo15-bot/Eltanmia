@@ -50,8 +50,25 @@
       doc.head.appendChild(stylesheet);
       const logoStylesheet=doc.createElement('link');
       logoStylesheet.rel='stylesheet';
-      logoStylesheet.href='assets/logo.css';
+      logoStylesheet.href='assets/logo.css?v=20261114-header-logo';
       doc.head.appendChild(logoStylesheet);
+      const logo=doc.querySelector('header .logo');
+      if(logo){
+        const logoUrl=new URL('assets/logo--2026-11-12%20at%201.40.18%20PM.jpeg',frame.contentWindow.location.href).href;
+        logo.style.setProperty('width','clamp(150px,20vw,220px)','important');
+        logo.style.setProperty('height','64px','important');
+        logo.style.setProperty('display','block','important');
+        logo.style.setProperty('overflow','hidden','important');
+        logo.style.setProperty('font-size','0','important');
+        logo.style.setProperty('line-height','0','important');
+        logo.style.setProperty('background-image',`url("${logoUrl}")`,'important');
+        logo.style.setProperty('background-position','center','important');
+        logo.style.setProperty('background-size','contain','important');
+        logo.style.setProperty('background-repeat','no-repeat','important');
+        logo.setAttribute('aria-label','Eltanmia Company');
+        const bolt=logo.querySelector('i');
+        if(bolt)bolt.style.setProperty('display','none','important');
+      }
       const profileLink=doc.querySelector('[data-i="profile"]');
       if(profileLink){
         profileLink.href='assets/Eltanmia%20company%20profile.pdf';
