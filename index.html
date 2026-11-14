@@ -9,18 +9,8 @@
     *{box-sizing:border-box}
     html,body{margin:0;width:100%;min-height:100%;background:#fff}
     iframe{display:block;width:100%;height:100vh;border:0}
-    .intro-splash{
-      position:fixed;inset:0;z-index:9999;
-      display:grid;place-items:center;
-      width:100%;height:100%;padding:5vw;
-      background:#fff;
-      opacity:1;visibility:visible;
-      transition:opacity .55s ease,visibility .55s ease;
-    }
-    .intro-splash img{
-      display:block;width:min(94vw,1500px);height:min(88vh,850px);
-      object-fit:contain;object-position:center;
-    }
+    .intro-splash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;width:100%;height:100%;padding:5vw;background:#fff;opacity:1;visibility:visible;transition:opacity .55s ease,visibility .55s ease}
+    .intro-splash img{display:block;width:min(94vw,1500px);height:min(88vh,850px);object-fit:contain;object-position:center}
     .intro-splash.is-leaving{opacity:0;visibility:hidden;pointer-events:none}
     @media(prefers-reduced-motion:reduce){.intro-splash{transition:none}}
   </style>
@@ -55,23 +45,47 @@
 
       const partnerStyles=doc.createElement('style');
       partnerStyles.textContent=`
-        #clients .logos{display:grid!important;grid-template-columns:1fr!important;gap:26px!important;margin-top:30px!important;padding:0!important;overflow:visible!important}
-        #clients .partner-group h3{margin:0 0 12px;color:#0b1f3a;font:700 19px/1.5 'Cairo',Arial,sans-serif}
-        #clients .partner-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
-        #clients .partner-item{min-height:68px;padding:14px 12px;display:grid;place-items:center;text-align:center;background:#fff;border:1px solid #e1e7ef;border-radius:12px;box-shadow:0 4px 14px rgba(11,31,58,.05);color:#2875d8;font-family:'Cairo',Arial,sans-serif;font-size:15px;font-weight:700;line-height:1.55;white-space:normal}
-        @media(max-width:560px){#clients .partner-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}#clients .partner-item{min-height:64px;padding:10px 8px;font-size:13px}}
+        #clients .logos{display:block!important;margin-top:30px!important;padding:0!important;overflow:hidden!important;position:relative;direction:ltr;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent)}
+        #clients .partner-track{display:flex;width:max-content;align-items:stretch;animation:partner-marquee 52s linear infinite;will-change:transform}
+        #clients .partner-set{display:flex;flex:0 0 auto;gap:12px;padding-inline-end:12px;align-items:stretch}
+        #clients .partner-item{width:clamp(170px,20vw,230px);min-height:72px;padding:12px;display:grid;place-items:center;text-align:center;background:#fff;border:1px solid #e1e7ef;border-radius:12px;box-shadow:0 4px 14px rgba(11,31,58,.05);color:#2875d8;font-family:'Cairo',Arial,sans-serif;font-size:15px;font-weight:700;line-height:1.55;white-space:normal}
+        #clients .logos:hover .partner-track,#clients .logos:focus-within .partner-track{animation-play-state:paused}
+        @keyframes partner-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+        @media(max-width:560px){#clients .partner-set{gap:9px;padding-inline-end:9px}#clients .partner-item{width:165px;min-height:66px;padding:10px;font-size:13px}}
+        @media(prefers-reduced-motion:reduce){#clients .logos{overflow-x:auto!important;mask-image:none;-webkit-mask-image:none}#clients .partner-track{animation:none;transform:none}}
       `;
       doc.head.appendChild(partnerStyles);
 
-      const partnerGroups=[
-        {title:'العلامات التجارية',items:['Schneider Electric','Elsewedy Electric','ABB','Siemens','Legrand','Eaton','Philips','Prysmian','Nexans','Honeywell']},
-        {title:'مكاتب الاستشارات الهندسية',items:['Crown Home للاستشارات الهندسية','Med للاستشارات الهندسية','محمود خليل المشنب للاستشارات الهندسية','ECG للاستشارات الهندسية','شاكر للاستشارات الهندسية','True Value للاستشارات الهندسية','محرم باخوم للاستشارات الهندسية']},
-        {title:'الشركات والمصانع والمشروعات',items:['مصنع الرحاب','مصنع بيت الهندسة','المتحدة للكابلات المتخصصة','مصنع المتحدة للوحات','شركة نصيب توركوم','شركة توكل','دلتا ايجيبت للاضاءة','سيراج للاضاءة','اركو لكس للاضاءة','معرض سيراميك كليوباترا','مجموعة سيراميكا كليوباترا','فنادق سيراميكا كليوباترا','شركة الدورادو للتنمية السياحية','شركة كليوباترا للتنمية المتكاملة والاستثمار السياحي','شركة سيجما ارت الامارات','كمبوند دريم لاند','النساجون الشرقيون فندق سانتيدو','شركة اسكاس']}
+      const partnerNames=[
+        'Schneider Electric','Elsewedy Electric','ABB','Siemens','Legrand','Eaton','Philips','Prysmian','Nexans','Honeywell',
+        'Crown Home للاستشارات الهندسية','Med للاستشارات الهندسية','محمود خليل المشنب للاستشارات الهندسية','ECG للاستشارات الهندسية','شاكر للاستشارات الهندسية','True Value للاستشارات الهندسية','محرم باخوم للاستشارات الهندسية',
+        'مصنع الرحاب','مصنع بيت الهندسة','المتحدة للكابلات المتخصصة','مصنع المتحدة للوحات','شركة نصيب توركوم','شركة توكل','دلتا ايجيبت للاضاءة','سيراج للاضاءة','اركو لكس للاضاءة','معرض سيراميك كليوباترا','مجموعة سيراميكا كليوباترا','فنادق سيراميكا كليوباترا','شركة الدورادو للتنمية السياحية','شركة كليوباترا للتنمية المتكاملة والاستثمار السياحي','شركة سيجما ارت الامارات','كمبوند دريم لاند','النساجون الشرقيون فندق سانتيدو','شركة اسكاس'
       ];
       const logos=doc.querySelector('#clients .logos');
       if(logos){
-        logos.innerHTML=partnerGroups.map(group=>`<div class="partner-group"><h3 dir="rtl">${group.title}</h3><div class="partner-grid">${group.items.map(name=>`<div class="partner-item" dir="auto">${name}</div>`).join('')}</div></div>`).join('');
+        const itemMarkup=()=>partnerNames.map(name=>`<div class="partner-item" dir="auto">${name}</div>`).join('');
+        logos.innerHTML=`<div class="partner-track"><div class="partner-set">${itemMarkup()}</div><div class="partner-set" aria-hidden="true">${itemMarkup()}</div></div>`;
         logos.setAttribute('aria-label','Partners and brands');
+        logos.setAttribute('role','region');
+        logos.setAttribute('tabindex','0');
+      }
+
+      const logo=doc.querySelector('header .logo');
+      if(logo){
+        const logoUrl=new URL('assets/logo--2026-11-12%20at%201.40.18%20PM.jpeg',frame.contentWindow.location.href).href;
+        logo.style.setProperty('width','clamp(200px,24vw,280px)','important');
+        logo.style.setProperty('height','76px','important');
+        logo.style.setProperty('display','block','important');
+        logo.style.setProperty('overflow','hidden','important');
+        logo.style.setProperty('font-size','0','important');
+        logo.style.setProperty('line-height','0','important');
+        logo.style.setProperty('background-image',`url("${logoUrl}")`,'important');
+        logo.style.setProperty('background-position','center','important');
+        logo.style.setProperty('background-size','contain','important');
+        logo.style.setProperty('background-repeat','no-repeat','important');
+        logo.setAttribute('aria-label','Eltanmia Company');
+        const bolt=logo.querySelector('i');
+        if(bolt)bolt.style.setProperty('display','none','important');
       }
 
       const profileLink=doc.querySelector('[data-i="profile"]');
