@@ -6,9 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Eltanmia Company</title>
   <style>
-    *{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;background:#fff}iframe{display:block;width:100%;height:100vh;border:0}
+    *{box-sizing:border-box}
+    html,body{margin:0;width:100%;min-height:100%;background:#fff}
+    iframe{display:block;width:100%;height:100vh;border:0}
     .intro-splash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;width:100%;height:100%;padding:5vw;background:#fff;opacity:1;visibility:visible;transition:opacity .55s ease,visibility .55s ease}
-    .intro-splash img{display:block;width:min(94vw,1500px);height:min(88vh,850px);object-fit:contain;object-position:center}.intro-splash.is-leaving{opacity:0;visibility:hidden;pointer-events:none}
+    .intro-splash img{display:block;width:min(94vw,1500px);height:min(88vh,850px);object-fit:contain;object-position:center}
+    .intro-splash.is-leaving{opacity:0;visibility:hidden;pointer-events:none}
     @media(prefers-reduced-motion:reduce){.intro-splash{transition:none}}
   </style>
 </head>
@@ -32,47 +35,53 @@
         #clients .partner-track{display:flex;width:max-content;align-items:stretch;animation:partner-marquee 52s linear infinite;will-change:transform}
         #clients .partner-set{display:flex;flex:0 0 auto;gap:12px;padding-inline-end:12px;align-items:stretch}
         #clients .partner-item{width:clamp(170px,20vw,230px);min-height:72px;padding:12px;display:grid;place-items:center;text-align:center;background:#fff;border:1px solid #e1e7ef;border-radius:12px;box-shadow:0 4px 14px rgba(11,31,58,.05);color:#2875d8;font-family:'Cairo',Arial,sans-serif;font-size:15px;font-weight:700;line-height:1.55;white-space:normal}
-        #clients .logos:hover .partner-track,#clients .logos:focus-within .partner-track{animation-play-state:paused}
         @keyframes partner-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
         @media(max-width:560px){#clients .partner-set{gap:9px;padding-inline-end:9px}#clients .partner-item{width:165px;min-height:66px;padding:10px;font-size:13px}}
         @media(prefers-reduced-motion:reduce){#clients .logos{overflow-x:auto!important;mask-image:none;-webkit-mask-image:none}#clients .partner-track{animation:none;transform:none}}
         #gallery{background:#f4f7fb!important}#gallery h2{text-align:center!important;color:#0b1f3a!important}
-        #gallery .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px;margin-top:28px}
-        #gallery figure{margin:0;overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 10px 28px rgba(11,31,58,.12)}
-        #gallery figure img{display:block;width:100%;height:clamp(220px,38vw,460px);object-fit:cover;transition:transform .35s ease}
-        #gallery figure:hover img{transform:scale(1.025)}#gallery figcaption{padding:12px 16px;color:#2875d8;font:600 14px/1.6 'Cairo',Arial,sans-serif;text-align:center}
+        #gallery .gallery-grid{display:block!important;margin-top:28px!important;padding:0!important;overflow:hidden!important;position:relative;direction:ltr;mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent)}
+        #gallery .gallery-track{display:flex;width:max-content;align-items:stretch;animation:gallery-marquee 70s linear infinite;will-change:transform}
+        #gallery .gallery-set{display:flex;flex:0 0 auto;gap:16px;padding-inline-end:16px;align-items:stretch}
+        #gallery figure{flex:0 0 auto;width:clamp(260px,34vw,420px);margin:0;overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 10px 28px rgba(11,31,58,.12)}
+        #gallery figure a{display:block}
+        #gallery figure img{display:block;width:100%;height:clamp(200px,28vw,330px);object-fit:cover;transition:transform .35s ease}
+        #gallery figure:hover img{transform:scale(1.025)}
+        #gallery figcaption{padding:10px 14px;color:#2875d8;font:600 14px/1.6 'Cairo',Arial,sans-serif;text-align:center}
+        @keyframes gallery-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+        @media(max-width:560px){#gallery .gallery-set{gap:10px;padding-inline-end:10px}#gallery figure{width:250px}#gallery figure img{height:190px}}
+        @media(prefers-reduced-motion:reduce){#gallery .gallery-grid{overflow-x:auto!important;mask-image:none;-webkit-mask-image:none}#gallery .gallery-track{animation:none;transform:none}#gallery figure img{transition:none}}
         .score-project .img{height:auto!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;padding:3px;background:#fff!important}
         .score-project .img a{display:block;min-width:0;overflow:hidden}
         .score-project .img img{display:block;width:100%;height:clamp(120px,16vw,190px);object-fit:cover;transition:transform .25s ease}
-        .score-project .img a:hover img{transform:scale(1.04)}
-        .score-project .info{min-height:100px}
+        .score-project .img a:hover img{transform:scale(1.04)}.score-project .info{min-height:100px}
         @media(max-width:560px){.score-project .img img{height:125px}}
-        @media(prefers-reduced-motion:reduce){#gallery figure img,.score-project .img img{transition:none}}
+        @media(prefers-reduced-motion:reduce){.score-project .img img{transition:none}}
       `;doc.head.appendChild(customStyles);
+
       const partnerNames=['Schneider Electric','Elsewedy Electric','ABB','Siemens','Legrand','Eaton','Philips','Prysmian','Nexans','Honeywell','Crown Home للاستشارات الهندسية','Med للاستشارات الهندسية','محمود خليل المشنب للاستشارات الهندسية','ECG للاستشارات الهندسية','شاكر للاستشارات الهندسية','True Value للاستشارات الهندسية','محرم باخوم للاستشارات الهندسية','مصنع الرحاب','مصنع بيت الهندسة','المتحدة للكابلات المتخصصة','مصنع المتحدة للوحات','شركة نصيب توركوم','شركة توكل','دلتا ايجيبت للاضاءة','سيراج للاضاءة','اركو لكس للاضاءة','معرض سيراميك كليوباترا','مجموعة سيراميكا كليوباترا','فنادق سيراميكا كليوباترا','شركة الدورادو للتنمية السياحية','شركة كليوباترا للتنمية المتكاملة والاستثمار السياحي','شركة سيجما ارت الامارات','كمبوند دريم لاند','النساجون الشرقيون فندق سانتيدو','شركة اسكاس'];
       const partners=doc.querySelector('#clients .logos');
       if(partners){const items=()=>partnerNames.map(name=>`<div class="partner-item" dir="auto">${name}</div>`).join('');partners.innerHTML=`<div class="partner-track"><div class="partner-set">${items()}</div><div class="partner-set" aria-hidden="true">${items()}</div></div>`;partners.setAttribute('aria-label','Partners and brands');partners.setAttribute('role','region');partners.setAttribute('tabindex','0')}
+
+      const galleryFiles=['معرض الصور.jpeg','معرض الصور-0.jpeg','معرض الصور-01.jpeg','معرض الصور-02.jpeg','معرض الصور-03.jpeg','معرض الصور-04.jpeg','معرض الصور-05.jpeg','معرض الصور-06.jpeg','معرض الصور-07.jpeg','معرض الصور-8.jpeg','معرض الصور-9.jpeg','معرض الصور-10.jpeg','معرض الصور-11.jpeg','معرض الصور-12.jpeg','معرض الصور-13.jpeg','معرض الصور-14.jpeg','معرض الصور-15.jpeg','معرض الصور-16.jpeg','معرض الصور-17.jpeg','معرض الصور-18.jpeg','معرض الصور-19.jpeg','معرض الصور-20.jpeg'];
       const safety=doc.querySelector('#qhse');
-      if(safety){const gallery=doc.createElement('section');gallery.id='gallery';gallery.setAttribute('aria-label','Photo gallery');gallery.innerHTML=`<div class="wrap"><h2>معرض الصور | Photo Gallery</h2><div class="gallery-grid"><figure><a href="assets/pic-tec-01.jpeg" target="_blank" rel="noopener"><img src="assets/pic-tec-01.jpeg" alt="Eltanmia project photo" loading="lazy"></a><figcaption>Eltanmia Company project</figcaption></figure></div></div>`;safety.replaceWith(gallery)}
+      if(safety){
+        const gallery=doc.createElement('section');gallery.id='gallery';gallery.setAttribute('aria-label','Photo gallery');
+        const slides=galleryFiles.map((file,index)=>{const imageUrl=new URL(encodeURIComponent(file),frame.contentWindow.location.href).href;return `<figure><a href="${imageUrl}" target="_blank" rel="noopener"><img src="${imageUrl}" alt="معرض الصور - صورة ${index+1}" loading="lazy"></a><figcaption>معرض الصور ${index+1}</figcaption></figure>`}).join('');
+        gallery.innerHTML=`<div class="wrap"><h2>معرض الصور | Photo Gallery</h2><div class="gallery-grid" role="region" aria-label="معرض الصور"><div class="gallery-track"><div class="gallery-set">${slides}</div><div class="gallery-set" aria-hidden="true">${slides}</div></div></div></div>`;
+        safety.replaceWith(gallery);
+      }
       const galleryNav=doc.querySelector('#nav a[href="#qhse"]');
       if(galleryNav){galleryNav.href='#gallery';const syncGalleryLabel=()=>galleryNav.textContent=doc.documentElement.lang==='ar'?'معرض الصور':'Photo Gallery';syncGalleryLabel();new MutationObserver(syncGalleryLabel).observe(doc.documentElement,{attributes:true,attributeFilter:['lang']})}
-      // Add the uploaded Score Compound photos as a project card and retain it when project filters change.
+
       const scorePhotos=['كمبوند%20سكور-6%20اكتوبر.jpeg','كمبوند%20سكور-6%20اكتوبر-1.jpeg','كمبوند%20سكور-6%20اكتوبر-2.jpeg'];
       const scoreTitle=()=>doc.documentElement.lang==='ar'?'كمبوند سكور، 6 أكتوبر':'Score Compound, 6th of October';
       const originalRender=frame.contentWindow.renderProjects;
       if(typeof originalRender==='function'){
-        frame.contentWindow.renderProjects=function(){
-          originalRender();
-          const activeFilter=doc.querySelector('#filters button[aria-pressed="true"]')?.dataset.f;
-          if(activeFilter&&activeFilter!=='all'&&activeFilter!=='res')return;
-          const grid=doc.querySelector('#grid');
-          if(!grid||grid.querySelector('.score-project'))return;
-          const images=scorePhotos.map((file,index)=>`<a href="assets/${file}" target="_blank" rel="noopener"><img src="assets/${file}" alt="${scoreTitle()} - photo ${index+1}" loading="lazy"></a>`).join('');
-          const card=doc.createElement('article');card.className='proj score-project';card.innerHTML=`<div class="img">${images}</div><div class="info"><h3>${scoreTitle()}</h3><small>${doc.documentElement.lang==='ar'?'السادس من أكتوبر':'6th of October'}</small></div>`;grid.appendChild(card);
-        };
+        frame.contentWindow.renderProjects=function(){originalRender();const activeFilter=doc.querySelector('#filters button[aria-pressed="true"]')?.dataset.f;if(activeFilter&&activeFilter!=='all'&&activeFilter!=='res')return;const grid=doc.querySelector('#grid');if(!grid||grid.querySelector('.score-project'))return;const images=scorePhotos.map((file,index)=>`<a href="assets/${file}" target="_blank" rel="noopener"><img src="assets/${file}" alt="${scoreTitle()} - photo ${index+1}" loading="lazy"></a>`).join('');const card=doc.createElement('article');card.className='proj score-project';card.innerHTML=`<div class="img">${images}</div><div class="info"><h3>${scoreTitle()}</h3><small>${doc.documentElement.lang==='ar'?'السادس من أكتوبر':'6th of October'}</small></div>`;grid.appendChild(card)};
         frame.contentWindow.renderProjects();
         new MutationObserver(()=>{const card=doc.querySelector('#grid .score-project h3');if(card)card.textContent=scoreTitle()}).observe(doc.documentElement,{attributes:true,attributeFilter:['lang']});
       }
+      const plazaStyles=doc.createElement('style');plazaStyles.textContent=`#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid::before,#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid::before{content:"برج كليوباترا بلازا، الإسكندرية";display:flex;align-items:flex-end;min-height:270px;padding:18px;border:1px solid #e1e7ef;border-radius:14px;color:#fff;font:700 20px/1.4 'Cairo',Arial,sans-serif;text-shadow:0 2px 6px rgba(0,0,0,.8);background-image:linear-gradient(to top,rgba(5,18,45,.84),rgba(5,18,45,0) 58%),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-1.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9--2.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-4.jpeg');background-size:cover;background-position:center;background-repeat:no-repeat;box-shadow:0 5px 16px rgba(11,31,58,.12)}`;doc.head.appendChild(plazaStyles);
       const logo=doc.querySelector('header .logo');
       if(logo){const logoUrl=new URL('assets/logo--2026-11-12%20at%201.40.18%20PM.jpeg',frame.contentWindow.location.href).href;logo.style.setProperty('width','clamp(200px,24vw,280px)','important');logo.style.setProperty('height','76px','important');logo.style.setProperty('display','block','important');logo.style.setProperty('overflow','hidden','important');logo.style.setProperty('font-size','0','important');logo.style.setProperty('line-height','0','important');logo.style.setProperty('background-image',`url("${logoUrl}")`,'important');logo.style.setProperty('background-position','center','important');logo.style.setProperty('background-size','contain','important');logo.style.setProperty('background-repeat','no-repeat','important');logo.setAttribute('aria-label','Eltanmia Company');const bolt=logo.querySelector('i');if(bolt)bolt.style.setProperty('display','none','important')}
       const emailItem=doc.querySelector('#contact .info li[dir="ltr"]:nth-child(3)');if(emailItem)emailItem.innerHTML='<a href="mailto:info@eltanmia-eng.com">info@eltanmia-eng.com</a>';
