@@ -23,6 +23,10 @@
       stylesheet.rel='stylesheet';
       stylesheet.href='assets/modern.css';
       doc.head.appendChild(stylesheet);
+      const logoStylesheet=doc.createElement('link');
+      logoStylesheet.rel='stylesheet';
+      logoStylesheet.href='assets/logo.css';
+      doc.head.appendChild(logoStylesheet);
       const resize=()=>{frame.style.height=Math.max(doc.documentElement.scrollHeight,doc.body.scrollHeight)+'px'};
       new ResizeObserver(resize).observe(doc.documentElement);
       new ResizeObserver(resize).observe(doc.body);
