@@ -50,13 +50,13 @@
       doc.head.appendChild(stylesheet);
       const logoStylesheet=doc.createElement('link');
       logoStylesheet.rel='stylesheet';
-      logoStylesheet.href='assets/logo.css?v=20261114-header-logo';
+      logoStylesheet.href='assets/logo.css?v=20261114-header-logo-large';
       doc.head.appendChild(logoStylesheet);
       const logo=doc.querySelector('header .logo');
       if(logo){
         const logoUrl=new URL('assets/logo--2026-11-12%20at%201.40.18%20PM.jpeg',frame.contentWindow.location.href).href;
-        logo.style.setProperty('width','clamp(150px,20vw,220px)','important');
-        logo.style.setProperty('height','64px','important');
+        logo.style.setProperty('width','clamp(200px,24vw,280px)','important');
+        logo.style.setProperty('height','76px','important');
         logo.style.setProperty('display','block','important');
         logo.style.setProperty('overflow','hidden','important');
         logo.style.setProperty('font-size','0','important');
