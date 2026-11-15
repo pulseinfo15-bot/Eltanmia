@@ -1,57 +1,43 @@
 @import url('https://cdn.jsdelivr.net/gh/pulseinfo15-bot/Eltanmia@97f81f415a1d3ae90911fd9f79f0dcc79057ca5f/assets/modern.css');
 
-/* Arabic hero copy from the supplied design. The existing language switch toggles
-   the html[lang] attribute, so the English hero remains unchanged. */
-html[lang="ar"] .hero .wrap::before {
+/* Arabic hero text from the supplied mobile design. The site's language
+   switch changes the document lang attribute; English remains untouched. */
+html:lang(ar) .hero .wrap::before {
   content: "مقاولات كهروميكانيكية · منذ ٢٠٠٤";
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   margin: 0 0 28px;
-  padding: 7px 18px;
+  padding: 7px 18px 7px 30px;
   border: 1px solid rgba(255,255,255,.28);
   border-radius: 999px;
   color: #f3f6fb;
-  background: rgba(11,31,58,.42);
+  background: radial-gradient(circle at 14px 50%, #ff7a00 0 5px, transparent 6px), rgba(11,31,58,.42);
   font: 600 15px/1.6 'Cairo',sans-serif;
 }
-html[lang="ar"] .hero .wrap::after {
-  content: "";
-  position: absolute;
-  top: 19px;
-  right: var(--pad);
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #ff7a00;
-  pointer-events: none;
-}
-html[lang="ar"] .hero h1 {
+html:lang(ar) .hero h1 {
   font-size: 0;
   max-width: 16ch;
+  line-height: 1.25;
 }
-html[lang="ar"] .hero h1::before {
+html:lang(ar) .hero h1::before {
   content: "نُشيّد الأنظمة التي تنبض بها المباني";
   display: block;
   font: 800 clamp(38px,6.4vw,78px)/1.25 'Cairo',sans-serif;
   letter-spacing: 0;
 }
-html[lang="ar"] .hero p {
+html:lang(ar) .hero p {
   font-size: 0;
   max-width: 56ch;
 }
-html[lang="ar"] .hero p::before {
+html:lang(ar) .hero p::before {
   content: "نتولى في التنمية الهندسية تصميم وتنفيذ وصيانة أنظمة الكهرباء والتكييف والصحي ومكافحة الحريق للمنشآت التجارية والصناعية والطبية، بأعلى معايير السلامة، وفي المواعيد المحددة، وفق المواصفات العالمية.";
   display: block;
   color: #c6d3e3;
   font: 400 clamp(18px,2.1vw,22px)/1.9 'Cairo',sans-serif;
 }
+html:lang(ar) #lang { cursor: pointer; }
 @media(max-width:600px) {
-  html[lang="ar"] .hero .wrap::before { margin-bottom: 24px; font-size: 13px; }
-  html[lang="ar"] .hero .wrap::after { top: 18px; right: calc(var(--pad) + 10px); }
-  html[lang="ar"] .hero h1::before { font-size: clamp(36px,9vw,50px); line-height: 1.35; }
-  html[lang="ar"] .hero p::before { font-size: 18px; line-height: 1.8; }
-}
-@media(prefers-reduced-motion:reduce) {
-  html[lang="ar"] .hero * { scroll-behavior: auto; }
+  html:lang(ar) .hero .wrap::before { margin-bottom: 24px; font-size: 13px; }
+  html:lang(ar) .hero h1::before { font-size: clamp(36px,9vw,50px); line-height: 1.35; }
+  html:lang(ar) .hero p::before { font-size: 18px; line-height: 1.8; }
 }
