@@ -11,3 +11,17 @@
 #grid > .proj:nth-child(3) .img svg {
   display:none !important;
 }
+
+/* Show the Nasr City Cleopatra Tower image in its project card in both All and Residential views. */
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid > .proj:nth-child(5) .img,
+#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid > .proj:nth-child(2) .img {
+  background-image:
+    linear-gradient(180deg,rgba(5,18,45,.08),rgba(5,18,45,.18)),
+    url('%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7-%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1-1.png') !important;
+  background-size:cover !important;
+  background-position:center !important;
+}
+#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid > .proj:nth-child(5) .img svg,
+#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid > .proj:nth-child(2) .img svg {
+  display:none !important;
+}
