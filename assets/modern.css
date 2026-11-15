@@ -1,27 +1,57 @@
 @import url('https://cdn.jsdelivr.net/gh/pulseinfo15-bot/Eltanmia@97f81f415a1d3ae90911fd9f79f0dcc79057ca5f/assets/modern.css');
 
-/* Display the existing Cleopatra Hotel, Marsa Alam photo on its Recent Projects card. */
-#grid > .proj:nth-child(3) .img {
-  background-image:
-    linear-gradient(180deg,rgba(5,18,45,.08),rgba(5,18,45,.18)),
-    url('%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85.jpeg') !important;
-  background-size:cover !important;
-  background-position:center !important;
+/* Arabic hero copy from the supplied design. The existing language switch toggles
+   the html[lang] attribute, so the English hero remains unchanged. */
+html[lang="ar"] .hero .wrap::before {
+  content: "مقاولات كهروميكانيكية · منذ ٢٠٠٤";
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 28px;
+  padding: 7px 18px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  color: #f3f6fb;
+  background: rgba(11,31,58,.42);
+  font: 600 15px/1.6 'Cairo',sans-serif;
 }
-#grid > .proj:nth-child(3) .img svg {
-  display:none !important;
+html[lang="ar"] .hero .wrap::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  right: var(--pad);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ff7a00;
+  pointer-events: none;
 }
-
-/* Show the Nasr City Cleopatra Tower image in its project card in both All and Residential views. */
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid > .proj:nth-child(5) .img,
-#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid > .proj:nth-child(2) .img {
-  background-image:
-    linear-gradient(180deg,rgba(5,18,45,.08),rgba(5,18,45,.18)),
-    url('%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7-%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1-1.png') !important;
-  background-size:cover !important;
-  background-position:center !important;
+html[lang="ar"] .hero h1 {
+  font-size: 0;
+  max-width: 16ch;
 }
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid > .proj:nth-child(5) .img svg,
-#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid > .proj:nth-child(2) .img svg {
-  display:none !important;
+html[lang="ar"] .hero h1::before {
+  content: "نُشيّد الأنظمة التي تنبض بها المباني";
+  display: block;
+  font: 800 clamp(38px,6.4vw,78px)/1.25 'Cairo',sans-serif;
+  letter-spacing: 0;
+}
+html[lang="ar"] .hero p {
+  font-size: 0;
+  max-width: 56ch;
+}
+html[lang="ar"] .hero p::before {
+  content: "نتولى في التنمية الهندسية تصميم وتنفيذ وصيانة أنظمة الكهرباء والتكييف والصحي ومكافحة الحريق للمنشآت التجارية والصناعية والطبية، بأعلى معايير السلامة، وفي المواعيد المحددة، وفق المواصفات العالمية.";
+  display: block;
+  color: #c6d3e3;
+  font: 400 clamp(18px,2.1vw,22px)/1.9 'Cairo',sans-serif;
+}
+@media(max-width:600px) {
+  html[lang="ar"] .hero .wrap::before { margin-bottom: 24px; font-size: 13px; }
+  html[lang="ar"] .hero .wrap::after { top: 18px; right: calc(var(--pad) + 10px); }
+  html[lang="ar"] .hero h1::before { font-size: clamp(36px,9vw,50px); line-height: 1.35; }
+  html[lang="ar"] .hero p::before { font-size: 18px; line-height: 1.8; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html[lang="ar"] .hero * { scroll-behavior: auto; }
 }
