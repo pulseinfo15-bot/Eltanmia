@@ -4,7 +4,7 @@
 @media(max-width:860px){.logo{width:190px!important;height:58px!important}}
 @media(max-width:560px){.logo{width:155px!important;height:52px!important}}
 
-/* Refined, responsive project cards. */
+/* Elegant, responsive Recent Projects cards. */
 #projects #grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,285px),1fr));gap:24px!important;align-items:stretch}
 #projects #grid>.proj{min-width:0;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:#102944;box-shadow:0 12px 30px rgba(0,0,0,.2);transition:transform .25s ease,box-shadow .25s ease}
 #projects #grid>.proj:hover{transform:translateY(-5px);box-shadow:0 20px 38px rgba(0,0,0,.3)}
@@ -15,40 +15,33 @@
 #projects #grid>.proj h3{margin:0 0 9px;color:#fff;font:700 21px/1.45 'Cairo','Barlow',sans-serif;letter-spacing:0}
 #projects #grid>.proj small{display:block;color:#b9c9dc;font:500 14px/1.7 'Cairo','Barlow',sans-serif}
 
-/* Six Sidi Heneish Resort photos: first in All/Hospitality. */
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(1) .img,
-#projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid>.proj:nth-child(1) .img{
- background-image:url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-0.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-1.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-2.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-3.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-5.jpeg');
- background-size:33.333% 50%;background-position:left top,center top,right top,left bottom,center bottom,right bottom;background-repeat:no-repeat
+/* Cleopatra Sidi Heneish Resort, Matrouh — all six photos in its project card. */
+#projects:has(#filters button[data-f="all"][aria-pressed="true"]) #grid>.proj:first-child .img,
+#projects:has(#filters button[data-f="hosp"][aria-pressed="true"]) #grid>.proj:first-child .img{
+  background-image:url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-0.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-1.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-2.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-3.jpeg'),url('../%D9%85%D9%86%D8%AA%D8%AC%D8%B9%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%B3%D9%8A%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B4%D8%8C%20%D9%85%D8%B7%D8%B1%D9%88%D8%AD-5.jpeg')!important;
+  background-size:33.333% 50%!important;background-position:left top,center top,right top,left bottom,center bottom,right bottom!important;background-repeat:no-repeat!important
 }
-/* Four Fantazia Beach Village photos: second in All/Hospitality. */
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(2) .img,
-#projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid>.proj:nth-child(2) .img{
- background-image:url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9.jpeg'),url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9%20(2).jpeg'),url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9-2.jpeg'),url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9-3.jpeg');
- background-size:50% 50%;background-position:left top,right top,left bottom,right bottom;background-repeat:no-repeat
-}
-/* Five Cleopatra Hotel, Marsa Alam photos: third in All/Hospitality. */
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(3) .img,
-#projects:has(#filters [data-f="hosp"][aria-pressed="true"]) #grid>.proj:nth-child(3) .img{
- background-image:url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-0.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-01.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85--2.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-4.jpeg');
- background-size:40% 50%;background-position:left top,center top,right top,left bottom,right bottom;background-repeat:no-repeat
-}
-/* Four Cleopatra Plaza Tower, Alexandria photos: fourth in All, first in Residential. */
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(4) .img,
-#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid>.proj:nth-child(1) .img{
- background-image:url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-1.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9--2.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-4.jpeg');
- background-size:50% 50%;background-position:left top,right top,left bottom,right bottom;background-repeat:no-repeat
-}
-/* Two Cleopatra Tower, Nasr City photos: fifth in All, second in Residential. */
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(5) .img,
-#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid>.proj:nth-child(2) .img{
- background-image:url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7-%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7-%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1-1.png');
- background-size:50% 100%;background-position:left center,right center;background-repeat:no-repeat
-}
-/* Hide dataset projects without uploaded photos instead of presenting blank cards. */
-#projects:has(#filters [data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(n+7){display:none!important}
-#projects:has(#filters [data-f="res"][aria-pressed="true"]) #grid>.proj:nth-child(3){display:none!important}
-#projects:has(#filters [data-f="comm"][aria-pressed="true"]) #grid>.proj{display:none!important}
+
+/* Fantazia Beach Village, Hurghada — four photos. */
+#projects:has(#filters button[data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(2) .img,
+#projects:has(#filters button[data-f="hosp"][aria-pressed="true"]) #grid>.proj:nth-child(2) .img{background-image:url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9.jpeg'),url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9%20(2).jpeg'),url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9-2.jpeg'),url('../%D9%82%D8%B1%D9%8A%D8%A9%20%D9%81%D8%A7%D9%86%D8%AA%D8%A7%D8%B2%D9%8A%D8%A7%20%D8%A8%D9%8A%D8%AA%D8%B4%D8%8C%20%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9-3.jpeg')!important;background-size:50% 50%!important;background-position:left top,right top,left bottom,right bottom!important;background-repeat:no-repeat!important}
+
+/* Cleopatra Hotel, Marsa Alam — five photos. */
+#projects:has(#filters button[data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(3) .img,
+#projects:has(#filters button[data-f="hosp"][aria-pressed="true"]) #grid>.proj:nth-child(3) .img{background-image:url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-0.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-01.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85--2.jpeg'),url('../%D9%81%D9%86%D8%AF%D9%82%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7%D8%8C%20%D9%85%D8%B1%D8%B3%D9%89%20%D8%B9%D9%84%D9%85-4.jpeg')!important;background-size:40% 50%!important;background-position:left top,center top,right top,left bottom,right bottom!important;background-repeat:no-repeat!important}
+
+/* Cleopatra Plaza Tower, Alexandria — four photos. */
+#projects:has(#filters button[data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(4) .img,
+#projects:has(#filters button[data-f="res"][aria-pressed="true"]) #grid>.proj:nth-child(1) .img{background-image:url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-1.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9--2.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7%20%D8%A8%D9%84%D8%A7%D8%B2%D8%A7%20-%D8%A7%D9%84%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9-4.jpeg')!important;background-size:50% 50%!important;background-position:left top,right top,left bottom,right bottom!important;background-repeat:no-repeat!important}
+
+/* Cleopatra Tower, Nasr City — two photos. */
+#projects:has(#filters button[data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(5) .img,
+#projects:has(#filters button[data-f="res"][aria-pressed="true"]) #grid>.proj:nth-child(2) .img{background-image:url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7-%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1.jpeg'),url('../%D8%A8%D8%B1%D8%AC%20%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%AA%D8%B1%D8%A7-%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1-1.png')!important;background-size:50% 100%!important;background-position:left center,right center!important;background-repeat:no-repeat!important}
+
+/* Keep empty sample cards out of view. */
+#projects:has(#filters button[data-f="all"][aria-pressed="true"]) #grid>.proj:nth-child(n+6):not(.score-project){display:none!important}
+#projects:has(#filters button[data-f="res"][aria-pressed="true"]) #grid>.proj:nth-child(n+3):not(.score-project){display:none!important}
+#projects:has(#filters button[data-f="comm"][aria-pressed="true"]) #grid>.proj{display:none!important}
 #projects #grid::before,#projects #grid::after{content:none!important;display:none!important}
 @media(max-width:600px){#projects #grid{grid-template-columns:1fr;gap:18px!important}#projects #grid>.proj .img{height:220px!important}}
 @media(prefers-reduced-motion:reduce){#projects #grid>.proj{transition:none!important}}
