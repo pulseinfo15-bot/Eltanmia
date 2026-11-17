@@ -28,25 +28,26 @@ html:lang(ar) .hero p::before {
   font: 400 clamp(18px,2.1vw,22px)/1.9 'Cairo',sans-serif;
 }
 
-/* Refined, image-led Arabic mobile landing experience. */
+/* Match the supplied Arabic mobile screenshot. */
 @media(max-width:600px) {
-  html:lang(ar) body { overflow-x: hidden; }
-  html:lang(ar) header {
+  html, body { direction: rtl; }
+  body { overflow-x: hidden; }
+  header {
     position: sticky;
     background: #fff;
     color: #0b1f3a;
     box-shadow: 0 2px 14px rgba(11,31,58,.08);
     backdrop-filter: none;
   }
-  html:lang(ar) .bar { height: 96px; gap: 8px; }
-  html:lang(ar) .tools { gap: 12px; }
-  html:lang(ar) .menu {
+  .bar { height: 96px; gap: 8px; }
+  .tools { gap: 12px; }
+  .menu {
     display: block;
     color: #0b1f3a;
     font-size: 23px;
     padding: 8px;
   }
-  html:lang(ar) .lang {
+  .lang {
     min-width: 132px;
     min-height: 48px;
     padding: 5px 12px;
@@ -56,7 +57,7 @@ html:lang(ar) .hero p::before {
     color: #0b1f3a;
     box-shadow: inset 0 0 0 1px rgba(11,31,58,.03);
   }
-  html:lang(ar) .hero {
+  .hero {
     min-height: calc(100svh - 96px);
     padding: 140px 0 42px;
     background-color: #0b1f3a;
@@ -64,29 +65,63 @@ html:lang(ar) .hero p::before {
     background-size: cover;
     background-position: center;
   }
-  html:lang(ar) .hero svg { opacity: .14; }
-  html:lang(ar) .hero .wrap { padding-inline: 30px; }
-  html:lang(ar) .hero .wrap::before { margin-bottom: 30px; font-size: 15px; }
-  html:lang(ar) .hero h1 { max-width: none; margin-bottom: 22px; line-height: 1.3; }
-  html:lang(ar) .hero h1::before { font-size: clamp(36px,9vw,50px); line-height: 1.35; }
-  html:lang(ar) .hero p { max-width: none; margin-bottom: 34px; }
-  html:lang(ar) .hero p::before { font-size: 18px; line-height: 1.8; }
-  html:lang(ar) .hero .cta { gap: 12px; }
-  html:lang(ar) .hero .cta .btn {
+  .hero svg { opacity: .14; }
+  .hero .wrap { padding-inline: 30px; text-align: right; }
+  .hero .wrap::before {
+    content: "مقاولات كهروميكانيكية · منذ ٢٠٠٤";
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0 24px;
+    padding: 7px 18px 7px 30px;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 999px;
+    color: #f3f6fb;
+    background: radial-gradient(circle at 14px 50%, #ff7a00 0 5px, transparent 6px), rgba(11,31,58,.42);
+    font: 600 14px/1.6 'Cairo',sans-serif;
+  }
+  .hero h1 {
+    max-width: none;
+    margin-bottom: 22px;
+    font-size: 0;
+    line-height: 1.3;
+  }
+  .hero h1::before {
+    content: "نُشيّد الأنظمة التي تنبض بها المباني";
+    display: block;
+    font: 800 clamp(36px,9vw,50px)/1.35 'Cairo',sans-serif;
+    letter-spacing: 0;
+  }
+  .hero p { max-width: none; margin-bottom: 34px; font-size: 0; }
+  .hero p::before {
+    content: "نتولى في التنمية الهندسية تصميم وتنفيذ وصيانة أنظمة الكهرباء والتكييف والصحي ومكافحة الحريق للمنشآت التجارية والصناعية والطبية، بأعلى معايير السلامة، وفي المواعيد المحددة، وفق المواصفات العالمية.";
+    display: block;
+    color: #c6d3e3;
+    font: 400 18px/1.8 'Cairo',sans-serif;
+  }
+  .hero .cta { gap: 12px; }
+  .hero .cta .btn {
     min-height: 68px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 16px;
     padding: 14px 22px;
-    font-size: 19px;
+    font-size: 0;
   }
-  html:lang(ar) .hero .cta .btn.ghost {
+  .hero .cta .btn:first-child::before {
+    content: "اطلب عرض سعر  ←";
+    font: 700 19px/1.4 'Cairo',sans-serif;
+  }
+  .hero .cta .btn.ghost {
     min-width: 250px;
     background: rgba(11,31,58,.4);
     border-color: rgba(255,255,255,.35);
   }
-  html:lang(ar) .wa {
+  .hero .cta .btn.ghost::before {
+    content: "تعرّف على خدماتنا";
+    font: 600 19px/1.4 'Cairo',sans-serif;
+  }
+  .wa {
     width: 84px;
     height: 84px;
     inset-inline-end: auto;
@@ -95,9 +130,5 @@ html:lang(ar) .hero p::before {
     background: #2164ed;
     box-shadow: 0 8px 24px rgba(0,0,0,.25);
   }
-  html:lang(ar) .wa svg { width: 39px; }
-}
-
-@media(max-width:600px) {
-  html:lang(ar) .hero .wrap::before { margin-bottom: 24px; }
+  .wa svg { width: 39px; }
 }
