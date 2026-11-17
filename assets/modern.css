@@ -1,7 +1,6 @@
 @import url('https://cdn.jsdelivr.net/gh/pulseinfo15-bot/Eltanmia@97f81f415a1d3ae90911fd9f79f0dcc79057ca5f/assets/modern.css');
 
-/* Arabic hero text from the supplied mobile design. The site's language
-   switch changes the document lang attribute; English remains untouched. */
+/* Arabic hero copy and badge from the supplied mobile design. */
 html:lang(ar) .hero .wrap::before {
   content: "مقاولات كهروميكانيكية · منذ ٢٠٠٤";
   display: inline-flex;
@@ -14,30 +13,91 @@ html:lang(ar) .hero .wrap::before {
   background: radial-gradient(circle at 14px 50%, #ff7a00 0 5px, transparent 6px), rgba(11,31,58,.42);
   font: 600 15px/1.6 'Cairo',sans-serif;
 }
-html:lang(ar) .hero h1 {
-  font-size: 0;
-  max-width: 16ch;
-  line-height: 1.25;
-}
+html:lang(ar) .hero h1 { font-size: 0; max-width: 16ch; line-height: 1.25; }
 html:lang(ar) .hero h1::before {
   content: "نُشيّد الأنظمة التي تنبض بها المباني";
   display: block;
   font: 800 clamp(38px,6.4vw,78px)/1.25 'Cairo',sans-serif;
   letter-spacing: 0;
 }
-html:lang(ar) .hero p {
-  font-size: 0;
-  max-width: 56ch;
-}
+html:lang(ar) .hero p { font-size: 0; max-width: 56ch; }
 html:lang(ar) .hero p::before {
   content: "نتولى في التنمية الهندسية تصميم وتنفيذ وصيانة أنظمة الكهرباء والتكييف والصحي ومكافحة الحريق للمنشآت التجارية والصناعية والطبية، بأعلى معايير السلامة، وفي المواعيد المحددة، وفق المواصفات العالمية.";
   display: block;
   color: #c6d3e3;
   font: 400 clamp(18px,2.1vw,22px)/1.9 'Cairo',sans-serif;
 }
-html:lang(ar) #lang { cursor: pointer; }
+
+/* Refined, image-led Arabic mobile landing experience. */
 @media(max-width:600px) {
-  html:lang(ar) .hero .wrap::before { margin-bottom: 24px; font-size: 13px; }
+  html:lang(ar) body { overflow-x: hidden; }
+  html:lang(ar) header {
+    position: sticky;
+    background: #fff;
+    color: #0b1f3a;
+    box-shadow: 0 2px 14px rgba(11,31,58,.08);
+    backdrop-filter: none;
+  }
+  html:lang(ar) .bar { height: 96px; gap: 8px; }
+  html:lang(ar) .tools { gap: 12px; }
+  html:lang(ar) .menu {
+    display: block;
+    color: #0b1f3a;
+    font-size: 23px;
+    padding: 8px;
+  }
+  html:lang(ar) .lang {
+    min-width: 132px;
+    min-height: 48px;
+    padding: 5px 12px;
+    border: 1px solid #d5dce5;
+    border-radius: 14px;
+    background: #f3f5f8;
+    color: #0b1f3a;
+    box-shadow: inset 0 0 0 1px rgba(11,31,58,.03);
+  }
+  html:lang(ar) .hero {
+    min-height: calc(100svh - 96px);
+    padding: 140px 0 42px;
+    background-color: #0b1f3a;
+    background-image: linear-gradient(180deg,rgba(5,20,42,.73),rgba(5,20,42,.78)),url('pic-tec-01.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+  html:lang(ar) .hero svg { opacity: .14; }
+  html:lang(ar) .hero .wrap { padding-inline: 30px; }
+  html:lang(ar) .hero .wrap::before { margin-bottom: 30px; font-size: 15px; }
+  html:lang(ar) .hero h1 { max-width: none; margin-bottom: 22px; line-height: 1.3; }
   html:lang(ar) .hero h1::before { font-size: clamp(36px,9vw,50px); line-height: 1.35; }
+  html:lang(ar) .hero p { max-width: none; margin-bottom: 34px; }
   html:lang(ar) .hero p::before { font-size: 18px; line-height: 1.8; }
+  html:lang(ar) .hero .cta { gap: 12px; }
+  html:lang(ar) .hero .cta .btn {
+    min-height: 68px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    padding: 14px 22px;
+    font-size: 19px;
+  }
+  html:lang(ar) .hero .cta .btn.ghost {
+    min-width: 250px;
+    background: rgba(11,31,58,.4);
+    border-color: rgba(255,255,255,.35);
+  }
+  html:lang(ar) .wa {
+    width: 84px;
+    height: 84px;
+    inset-inline-end: auto;
+    inset-inline-start: 28px;
+    bottom: 28px;
+    background: #2164ed;
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  }
+  html:lang(ar) .wa svg { width: 39px; }
+}
+
+@media(max-width:600px) {
+  html:lang(ar) .hero .wrap::before { margin-bottom: 24px; }
 }
